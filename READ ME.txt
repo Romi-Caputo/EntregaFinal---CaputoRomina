@@ -3,6 +3,8 @@ Proyecto Tienda Oliveto Encuadernacion
 #DESCRIPCION Y ESTADO DEL PROYECTO
 Plataforma que brinda acceso se brinda acceso tanto a administradores como a seguidores para poder observar los Productos
 que realizo y que vendo.
+VIDEO EXPLICATIVO:
+https://youtu.be/F5efXxg5bAI
 
 #INSTALACION
 
