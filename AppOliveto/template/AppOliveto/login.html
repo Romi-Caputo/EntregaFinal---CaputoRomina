@@ -1,0 +1,32 @@
+{% extends "AppOliveto/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div>
+    <p class="justify-content-center">
+        <br>
+        <br>
+        <h3 style="color:black">
+            Inicia Sesión
+        </h3>
+        <br>
+        <br>
+
+        <form action="" method="post">
+
+            {% csrf_token %}
+            {{form.as_p}}
+            
+            <br>
+        
+            <button class="btn btn-outline-dark" type="submit">Inicia Sesión</button>
+            <button> <a href="{% url 'register' %}"  > Registrate</a></button>
+            <br>
+            <br>
+        </form>
+
+    </p>
+</div>
+
+{% endblock %} 

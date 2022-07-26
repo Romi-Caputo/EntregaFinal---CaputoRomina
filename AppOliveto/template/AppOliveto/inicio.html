@@ -1,0 +1,25 @@
+{% extends "AppOliveto/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+{% if request.user.is_authenticated %}
+<button><a href="{% url 'logout' %}" class="btn btn-warning">Salir de Sesión</a></button>
+{% endif %}
+<!-- Header-->
+       <header class="bg-dark py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+             
+                    <div class="text-center my-5">
+                        <h1 class="display-5 fw-bolder text-white mb-2">Bienvenidos a la página oficial de Oliveto Encuadernación</h1>
+                        <p class="lead text-white-50 mb-7">En ésta App van a encontrar todos los productos que realizo 
+                            <br>
+                            con mucho amor y dedicación, 
+                            <br>
+                            totalmente personalizados a su gusto.</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center"></div>
+
+    </header>   
+
+    {% endblock %}

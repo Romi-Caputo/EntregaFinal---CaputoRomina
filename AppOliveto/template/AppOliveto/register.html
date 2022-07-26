@@ -1,0 +1,28 @@
+{% extends "AppOliveto/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %} 
+<div>
+    <p class="justify-content-center">
+    <h3 style="color:black">
+        <u>Registrate a la tienda de Oliveto! ♥ </u>
+     </h3>
+    </p>
+</div> 
+<div>
+    <section class="bg-light py-5">
+        <div class="container px-5">
+            <form action="" method="post" class="text-center">
+                {% csrf_token %}
+                {{form.as_p}}
+                <br>
+        
+                <button class="btn btn-outline-dark" type="submit">Registrarse</button>
+            </form>
+            <br>
+        </div>
+    </section>
+</div>
+
+{% endblock %} 

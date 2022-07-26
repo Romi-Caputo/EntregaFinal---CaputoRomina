@@ -1,0 +1,46 @@
+#NOMBRE
+Proyecto Tienda Oliveto Encuadernacion
+#DESCRIPCION Y ESTADO DEL PROYECTO
+Plataforma que brinda acceso se brinda acceso tanto a administradores como a seguidores para poder observar los Productos
+que realizo y que vendo.
+
+#INSTALACION
+
+*Instalar Python 3.10
+*Instalar Visual Code
+*Instalar Db Browser
+*Instalar SQLite3
+*Instalar Pillow
+*Descargar Repositorio https://github.com/Romi-Caputo/EntregaFinal---CaputoRomina.git
+*Abrir con Visual Code:
+*- Correr nuestro programa: 
+*python .\manage.py makemigrations
+*python .\manage.py migrate
+*python .\manage.py runserver
+
+#USO QUE HACE LA PAGINA
+
+http://127.0.0.1:8000/inicio - Ruta que deriva en el inicio de la web - Nav Bar interactiva, botones de inicio, productos, seguidores, contacto, sobre mi e inicio de sesión.
+Si se es usuario admin, se activa boton para editar, agregar y eliminar productos.
+
+http://127.0.0.1:8000/crearproductos/ - Crea los productos disponibles
+
+http://127.0.0.1:8000/productos/ - Nuestros Productos, lista mediante cards. Si se es socio admin, tiene funcionalidades de crear, editr y eliminar productos
+
+http://127.0.0.1:8000/seguidores - Informacion sobre los seguidores que se suscriben a la tienda
+
+http://127.0.0.1:8000/crearseguidores - Crea los productos disponibles
+
+http://127.0.0.1:8000/contacto - Formulario para ponerse en contacto con la autora
+
+http://127.0.0.1:8000/sobremi/ - Sobre el proyecto y sobre la autora
+
+http://127.0.0.1:8000/login/ - Formulario para realizar el login
+
+http://127.0.0.1:8000/logout/ - Cierre de Sesion
+
+http://127.0.0.1:8000/register/ - Formulario de Registro a la tienda
+
+http://127.0.0.1:8000/editarperfil - Edición del perfil 
+
+     

@@ -1,0 +1,41 @@
+{% extends "AppOliveto/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div>
+    <p>
+        <h3 style="color:black">
+           
+            Edición del producto
+            
+        </h3>
+    </p>
+</div>
+
+                <div class="card">
+                    <div class="card-header text-center">
+                        
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                        <table>
+                        
+                            {{ form.as_p }}
+                            <p><img class="card-img-top" src="{{prod.imagen.url}}" class="card-img-top" ></p>
+                        </table>
+                        
+                        
+                        <a href="{% url 'Productos' %}"><button class="btn btn-outline-dark">Editar Producto</button></a>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

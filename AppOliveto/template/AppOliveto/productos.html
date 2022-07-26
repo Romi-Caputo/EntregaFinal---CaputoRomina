@@ -1,0 +1,47 @@
+{% extends "AppOliveto/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div>
+    <p class="justify-content-center">
+    <h3 style="color:black">
+        <u>Productos Oliveto </u>
+     </h3>
+    </p>
+</div> 
+<br>
+<body>
+
+  {% for prod in productos %}
+  <div class="card" >
+    <img class="card-img-top" src="{{prod.imagen.url}}" class="card-img-top" style="height: 200px; width: 200px;" >
+    <div class="card-body">
+      <h5 class="card-title" style="color:rgb(133, 31, 90)"><b>{{prod.producto}}</b></h5>
+      <p class="card-text"><b>Detalles: </b>{{prod.descripcion}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Precio: $</b> {{prod.precio}}</p></li>
+          <p class="card-text">
+    </ul>    
+ 
+  <div style="text-align:length">
+    {% if user.is_staff %}
+    <a href="{% url 'EliminarProductos' prod.id %}"><button class="btn btn-outline-danger"><b>Eliminar Producto</b></button></a>
+    <a href="{% url 'EditarProductos' prod.id %}"> <button class="btn btn-outline-primary"><b>Editar Producto</b></button></a>
+    {% endif %}
+    <br>
+         
+    </div>           
+    <br>   
+
+  {% endfor %}      
+        
+  
+    
+
+    <div style="text-align:center">
+      <a href="{% url 'CrearProductos' %}"><button class="btn btn-outline-dark"><b>Agregar nuevo producto</b></button></a>
+    </div>
+               
+{% endblock %}

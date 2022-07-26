@@ -1,0 +1,28 @@
+{% extends "AppOliveto/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div>
+    <p class="justify-content-center">
+    <h3 style="color:black">
+        <u>Formulario - Editar Perfil </u>
+     </h3>
+    </p>
+</div> 
+    <h2>{{usuario}}</h2>
+
+    <div>
+    <form action="" method="POST">
+         {% csrf_token %}
+        
+        <table>
+            {{miFormulario.as_table}}    
+        </table>
+
+        <input type="submit", value="Enviar">
+    </form>
+</div>
+</body>
+{% endblock %}
+</html>

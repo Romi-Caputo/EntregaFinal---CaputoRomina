@@ -1,0 +1,44 @@
+{% extends "AppOliveto/padre.html" %}
+<div>
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div>
+    <p class="justify-content-center">
+    <h3 style="color:black">
+        <u>Seguidores de Oliveto </u>
+     </h3>
+    </p>
+</div> 
+<br>
+<body>
+    <div class="row gx-5 justify-content-center">
+        <div class="col-lg-10">
+ 
+    <ul class="list-group list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+
+        <b class="col-md-auto">Nombre del Socio</b> 
+        <b class="col-md-auto">Apellido</b>
+        <b class="col-md-auto">Edad</b>
+        <b class="col-md-auto">Email</b>
+
+        {% for seg in seguidores %}
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+
+            <span class="col-md-auto">{{seg.nombre}}</span>
+            <span class="col-md-auto">{{seg.apellido}}</span>
+            <span class="col-md-auto">{{seg.edad}}</span>
+            <span class="col-md-auto">{{seg.email}}</span>
+        {% endfor %}
+        
+    </ul>  
+
+    
+</section>
+</div>
+<div style="text-align:center">
+    <a href="{% url 'CrearSeguidores' %}"><button class="btn btn-outline-dark"><b>Agregar nuevo seguidor </b></button></a>
+  </div>
+{% endblock %} 
+
